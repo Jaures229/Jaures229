@@ -10,7 +10,6 @@ Hi 👋, I'm AGOSSOU Jaurès A Final year computer science student with a strong
 
 ## 🎮 <samp>Game Dev</samp>
 ![Unity](https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white)
-<a href="https://github.com/Miou-zora/R-Type" target="_blank"><img alt="Personal ECS" src="https://img.shields.io/badge/Personal_ECS-020752?&style=for-the-badge&logoColor=white" /></a>
 ![SFML/CSFML](https://img.shields.io/static/v1?style=for-the-badge&message=SFML/CSFML&color=567e25&logo=Löve2D&logoColor=567e25&label=)
 
 # 📊 GitHub Stats:
