@@ -406,7 +406,7 @@ const Hero = () => {
           </div>
           
           <div className="rpg-stats">
-            <div className="stat-item">LVL. 25</div>
+            <div className="stat-item">LVL. 18</div>
             <div className="stat-item">HP <span style={{color:'#ef4444'}}>██████</span></div>
             <div className="stat-item">MP <span style={{color:'#3b82f6'}}>████░░</span></div>
           </div>
