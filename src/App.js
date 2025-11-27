@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import {Helmet} from "react-helmet";
 
 // Dictionnaire des icônes (Chemins à adapter selon tes fichiers)
 const TECH_ICONS = {
@@ -343,7 +344,7 @@ const Footer = () => (
   
     <p>Contactez-moi pour démarrer une nouvelle partie.</p>
       <div className="contact-icons">
-        <a href="mailto:email@exemple.com">
+        <a href="mailto:contact.jauresagossou@gmail.com">
           <img src="assets/icons/email.svg" alt="Email" className="contact-logo" /> EMAIL </a>
         <a href="https://linkedin.com/in/jaurès-agossou-4021a1264">
           <img src="assets/icons/linkedin.svg" alt="LinkedIn" className="contact-logo" /> LINKEDIN
@@ -435,7 +436,7 @@ const Hero = () => {
                 2. L'URL actuelle génère un avatar pixel unique basé sur ton prénom.
             */}
             <img 
-              src="https://api.dicebear.com/9.x/pixel-art/svg?seed=Jaures" 
+              src="Jaures229/assets/images/avatar1.jpg" 
               alt="Avatar Pixel" 
               className="avatar-img"
             />
@@ -499,6 +500,13 @@ function App() {
 
   return (
     <div className={`App ${godMode ? 'rainbow-mode' : ''}`}>
+
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>S6S-JOKS portofolio</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+        <meta name="description" content="Portofolio application" />
+      </Helmet>
       <CornerHUD /> {/* <--- AJOUTER ICI LE HUD */}
       <Navbar />
       <BackgroundEffects />

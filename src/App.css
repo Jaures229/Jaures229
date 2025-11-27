@@ -565,8 +565,8 @@ footer { text-align: center; margin-top: 100px; padding: 40px 0; border-top: 1px
 }
 
 .avatar-frame {
-  width: 180px;
-  height: 180px;
+  width: 250px;
+  height: 250px;
   background: #0f172a;
   border: 4px solid var(--accent); /* Bordure dorée */
   padding: 5px;
