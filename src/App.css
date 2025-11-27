@@ -1,0 +1,1128 @@
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:wght@400;500;700&display=swap');
+
+:root {
+  --bg-color: #0f172a;      
+  --card-bg: #1e293b;       
+  --accent: #fbbf24;        
+  --secondary: #94a3b8;     
+  --text-main: #f1f5f9;     
+  --text-dim: #64748b;      
+  
+  --font-pixel: 'Press Start 2P', cursive; 
+  --font-code: 'Roboto Mono', monospace;
+}
+
+html { scroll-behavior: smooth; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-code);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* --- NAV --- */
+.sticky-nav {
+  position: fixed;
+  top: -80px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(15, 23, 42, 0.95); 
+  border-bottom: 2px solid var(--accent); 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  z-index: 1000;
+  transition: top 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.sticky-nav.visible { top: 0; }
+
+.nav-logo {
+  font-family: var(--font-pixel);
+  color: var(--accent);
+  font-size: 0.8rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav-logo::after { content: "_"; animation: blink 1s infinite; }
+
+.nav-menu { list-style: none; display: flex; gap: 30px; }
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--secondary);
+  font-family: var(--font-code);
+  font-weight: bold;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+.nav-menu a:hover { color: var(--accent); text-shadow: 0 0 5px rgba(251, 191, 36, 0.3); }
+
+/* --- BACKGROUND & LAYOUT --- */
+.background-fx { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; overflow: hidden; }
+.bg-grid {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px; pointer-events: none; z-index: -2;
+}
+
+.floating-icon { position: absolute; color: var(--text-main); font-family: var(--font-pixel); opacity: 0.04; font-size: 4rem; animation: floatAnim 15s infinite ease-in-out; }
+@keyframes floatAnim { 0% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-20px) rotate(5deg); } 100% { transform: translateY(0) rotate(0deg); } }
+@keyframes blink { 50% { opacity: 0; } }
+
+.container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; position: relative; z-index: 1; }
+
+/* --- SECTIONS --- */
+section { padding-top: 80px; margin-top: -80px; } /* Hack ancre */
+.section-title { font-family: var(--font-pixel); font-size: 1rem; color: var(--secondary); border-bottom: 2px solid #334155; padding-bottom: 10px; margin-bottom: 40px; margin-top: 80px; }
+.section-title span { color: var(--accent); }
+
+/* HERO */
+.hero { margin-top: 60px; margin-bottom: 80px; border-left: 4px solid var(--accent); padding-left: 30px; background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(2px); }
+h1 { font-family: var(--font-pixel); font-size: 1.8rem; margin-bottom: 15px; }
+.subtitle { color: var(--accent); font-weight: bold; margin-bottom: 20px; }
+.hero p { max-width: 600px; color: var(--secondary); margin-bottom: 30px; }
+.btn-cv { background-color: var(--accent); color: #0f172a; padding: 15px 25px; font-family: var(--font-pixel); font-size: 0.7rem; text-decoration: none; display: inline-flex; align-items: center; border-radius: 2px; transition: transform 0.2s; cursor: pointer; }
+.btn-cv:hover { transform: translateY(-2px); }
+
+/* SKILLS */
+.skills-container { display: flex; flex-wrap: wrap; gap: 12px; }
+.skill-badge { background: #334155; color: var(--text-main); padding: 8px 14px; border-radius: 4px; font-size: 0.9rem; border-left: 3px solid var(--accent); }
+
+/* PROJECTS */
+.project-grid { display: grid; gap: 50px; }
+.project-card { background: var(--card-bg); border-radius: 8px; overflow: hidden; display: flex; border: 1px solid #334155; transition: border-color 0.3s; }
+.project-card:hover { border-color: var(--accent); }
+.project-visual { flex: 1; background: #000; min-width: 300px; display: flex; align-items: center; justify-content: center; color: #334155; font-family: var(--font-pixel); font-size: 0.7rem; }
+.project-content { flex: 2; padding: 25px; }
+.project-meta { display: flex; justify-content: space-between; color: var(--text-dim); margin-bottom: 10px; font-family: var(--font-pixel); font-size: 0.6rem; }
+.project-date { color: var(--accent); }
+.project-title { font-family: var(--font-pixel); font-size: 1.1rem; margin-bottom: 15px; color: #fff; }
+.tech-stack { font-size: 0.85rem; color: var(--secondary); margin-bottom: 15px; }
+.description ul { margin-left: 20px; margin-bottom: 20px; color: #cbd5e1; font-size: 0.95rem; }
+.link-group { display: flex; gap: 15px; }
+.link-btn { text-decoration: none; color: var(--text-main); font-size: 0.8rem; font-weight: bold; border-bottom: 2px solid var(--accent); cursor: pointer; }
+.link-itch { color: #fa5c5c; border-bottom-color: #fa5c5c; }
+
+/* FOOTER */
+footer { text-align: center; margin-top: 100px; padding: 40px 0; border-top: 1px solid #334155; color: var(--text-dim); font-size: 0.9rem; }
+.contact-icons { margin-top: 20px; display: flex; justify-content: center; gap: 30px; }
+.contact-icons a { color: var(--text-main); text-decoration: none; display: flex; align-items: center; gap: 5px; } /* Changement pour aligner l'icône */
+.contact-icons a:hover { color: var(--accent); }
+
+@media (max-width: 768px) {
+  .sticky-nav { padding: 0 20px; height: 50px; }
+  .nav-menu { display: none; }
+  .project-card { flex-direction: column; }
+  .project-visual { height: 200px; }
+  .icon-5 { display: none; }
+}
+
+
+
+
+
+/* --- SKILLS --- */
+.arsenal-container { 
+  display: flex; 
+  flex-direction: column;
+  gap: 30px; 
+}
+
+.skill-category h3 {
+  font-family: var(--font-pixel);
+  font-size: 0.8rem;
+  color: var(--accent);
+  margin-bottom: 15px;
+  border-bottom: 1px dashed var(--card-bg);
+  padding-bottom: 5px;
+}
+
+.skills-container { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 12px; 
+}
+
+.skill-badge { 
+  background: #334155; 
+  color: var(--text-main); 
+  padding: 8px 14px; 
+  border-radius: 4px; 
+  font-size: 0.9rem; 
+  border-left: 3px solid var(--secondary); 
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skill-badge.skill-engine { border-left-color: var(--accent); }
+.skill-badge.skill-language { border-left-color: #5eead4; /* Cyan clair pour les langages */ }
+
+.skill-icon {
+  font-family: var(--font-pixel);
+  font-size: 0.7rem;
+  padding: 0 5px;
+  background: var(--bg-color);
+  color: var(--accent);
+  border-radius: 2px;
+}
+
+/* Style pour l'image (le logo réel) */
+.skill-logo {
+  width: 30px; 
+  height: 30px;
+  /* Ajoutez si besoin un peu de marge droite */
+  margin-right: 5px; 
+}
+
+/* S'assurer que le conteneur du badge permet l'alignement */
+.skill-badge { 
+  /* ... (styles existants) ... */
+  display: flex;
+  align-items: center; /* Important pour aligner l'image au texte */
+  gap: 8px; /* Espace entre l'icône et le texte */
+}
+
+/* S'assurer que le placeholder est toujours là si pas de logo */
+.skill-icon-placeholder { 
+  font-family: var(--font-pixel);
+  font-size: 0.7rem;
+  padding: 0 5px;
+  color: var(--text-dim);
+}
+
+
+
+
+/* FOOTER - pour les logos réels */
+.contact-logo {
+  width: 30px; /* Taille pour les icônes de contact */
+  height: 30px;
+}
+.contact-icons a { 
+    /* Mettons à jour le style existant pour centrer le texte avec l'image */
+    color: var(--text-main); 
+    text-decoration: none; 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; /* Augmenter l'espace entre le logo et le texte */
+}
+
+
+/* PROJECTS */
+/* ... (styles existants) ... */
+
+.project-visual { 
+  flex: 1; 
+  background: #000; 
+  min-width: 300px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  color: #334155; 
+  font-family: var(--font-pixel); 
+  font-size: 0.7rem; 
+  
+  /* 🔑 ESSENTIEL : Position relative pour l'iframe absolu */
+  position: relative; 
+  overflow: hidden;
+}
+
+/* Style pour l'image (GIF) */
+.project-media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Assure que le GIF remplit le conteneur */
+}
+
+/* NOUVEAU CONTENEUR DE RATIO */
+.video-ratio-box {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* Ratio 16:9 (9 / 16 = 0.5625) */
+  height: 0;
+  overflow: hidden;
+}
+/* Mettez à jour .project-iframe pour se baser sur ce nouveau parent */
+.project-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* --- RESPONSIVITÉ GLOBALE (pour les petits écrans) --- */
+@media (max-width: 768px) {
+  
+  /* Layout et Navigation */
+  .sticky-nav { padding: 0 20px; height: 50px; }
+  .nav-menu { display: none; }
+  .container { padding: 20px 15px; }
+
+  /* HEADER (Hero) */
+  .hero { 
+    margin-top: 50px; 
+    margin-bottom: 50px; 
+    padding-left: 15px; 
+    border-left-width: 2px;
+  }
+  h1 { font-size: 1.4rem; }
+  .subtitle { font-size: 0.8rem; }
+  .hero p { font-size: 0.9rem; }
+  .btn-cv { 
+    padding: 10px 15px; 
+    font-size: 0.6rem; 
+  }
+
+  /* Titres de Section */
+  .section-title { 
+    font-size: 0.9rem; 
+    margin-top: 40px; 
+    margin-bottom: 25px; 
+  }
+
+  /* SKILLS (Arsenal Technique) */
+  .skill-category h3 { font-size: 0.7rem; }
+  .skill-badge { 
+    padding: 6px 10px; 
+    font-size: 0.8rem;
+  }
+  .skill-logo {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* PROJECTS (Vidéo/Carte) */
+  .project-card { 
+    flex-direction: column; /* Empile les sections du projet */
+  }
+  .project-visual { 
+    height: 200px; /* 🔑 FIXE LA HAUTEUR DU CONTENEUR POUR L'IFRAME */
+    min-width: auto;
+  }
+  
+  .project-content { padding: 15px; }
+  .project-title { font-size: 0.9rem; }
+  .tech-stack { font-size: 0.75rem; }
+  .description ul { 
+    margin-left: 15px; 
+    font-size: 0.85rem; 
+  }
+  .link-group { 
+    gap: 10px; 
+    flex-wrap: wrap; 
+  }
+  .link-btn { font-size: 0.7rem; }
+
+  /* FOOTER */
+  .contact-icons { 
+    gap: 15px; 
+  }
+  .contact-logo {
+    width: 20px;
+    height: 20px;
+  }
+  .contact-icons a { font-size: 0.8rem; }
+  .icon-5 { display: none; }
+}
+
+/* Style pour l'image (GIF / Image simple) */
+.project-media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Assure que l'image remplit le conteneur sans déformation */
+}
+
+/* =========================================
+   NOUVEAUX STYLES PIXEL & HUD
+   ========================================= */
+
+/* --- 1. HUD CORNERS (Le cadre autour de l'écran) --- */
+.hud-container {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none; /* Important pour cliquer au travers */
+  z-index: 900;
+  padding: 20px;
+}
+
+.hud-corner {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-color: var(--accent);
+  border-style: solid;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.hud-container:hover .hud-corner { opacity: 1; }
+
+.top-left {
+  top: 20px; left: 20px;
+  border-width: 4px 0 0 4px; /* Haut et Gauche */
+}
+.top-right {
+  top: 20px; right: 20px;
+  border-width: 4px 4px 0 0; /* Haut et Droite */
+}
+.bottom-left {
+  bottom: 20px; left: 20px;
+  border-width: 0 0 4px 4px; /* Bas et Gauche */
+}
+.bottom-right {
+  bottom: 20px; right: 20px;
+  border-width: 0 4px 4px 0; /* Bas et Droite */
+}
+
+/* Ligne de scanbalayage (effet écran cathodique subtil) */
+.hud-scanline {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.1) 51%);
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 899;
+}
+
+/* --- 2. RPG STATS BAR (Dans le Hero) --- */
+.rpg-stats {
+  display: flex;
+  gap: 20px;
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  color: var(--text-dim);
+  margin-bottom: 20px;
+  padding: 10px;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid #334155;
+  display: inline-flex;
+}
+.stat-item { display: flex; align-items: center; gap: 5px; }
+
+
+/* --- 3. GLITCH EFFECT (Sur le Titre) --- */
+.glitch-wrapper { display: inline-block; position: relative; }
+
+.glitch {
+  position: relative;
+  color: var(--text-main);
+  /* L'effet glitch s'active au survol */
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color); /* Cache le texte original lors du décalage */
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -1px 0 #ff00c1;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+  display: none; /* Caché par défaut */
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -1px 0 #00fff9;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim2 5s infinite linear alternate-reverse;
+  display: none; /* Caché par défaut */
+}
+
+/* Activation au hover */
+.glitch:hover::before,
+.glitch:hover::after {
+  display: block;
+}
+
+@keyframes glitch-anim {
+  0% { clip: rect(38px, 9999px, 84px, 0); transform: skew(0.55deg); }
+  5% { clip: rect(96px, 9999px, 8px, 0); transform: skew(0.51deg); }
+  10% { clip: rect(21px, 9999px, 86px, 0); transform: skew(0.97deg); }
+  15% { clip: rect(4px, 9999px, 16px, 0); transform: skew(0.55deg); }
+  20% { clip: rect(81px, 9999px, 86px, 0); transform: skew(0.04deg); }
+  25% { clip: rect(33px, 9999px, 3px, 0); transform: skew(0.98deg); }
+  30% { clip: rect(81px, 9999px, 5px, 0); transform: skew(0.25deg); }
+  35% { clip: rect(78px, 9999px, 60px, 0); transform: skew(0.28deg); }
+  40% { clip: rect(74px, 9999px, 47px, 0); transform: skew(0.32deg); }
+  45% { clip: rect(36px, 9999px, 83px, 0); transform: skew(0.19deg); }
+  50% { clip: rect(44px, 9999px, 7px, 0); transform: skew(0.93deg); }
+  55% { clip: rect(66px, 9999px, 5px, 0); transform: skew(0.29deg); }
+  60% { clip: rect(7px, 9999px, 6px, 0); transform: skew(0.33deg); }
+  65% { clip: rect(51px, 9999px, 1px, 0); transform: skew(0.81deg); }
+  70% { clip: rect(5px, 9999px, 14px, 0); transform: skew(0.07deg); }
+  75% { clip: rect(4px, 9999px, 39px, 0); transform: skew(0.96deg); }
+  80% { clip: rect(10px, 9999px, 73px, 0); transform: skew(0.43deg); }
+  85% { clip: rect(66px, 9999px, 4px, 0); transform: skew(0.99deg); }
+  90% { clip: rect(93px, 9999px, 88px, 0); transform: skew(0.48deg); }
+  95% { clip: rect(63px, 9999px, 20px, 0); transform: skew(0.79deg); }
+  100% { clip: rect(57px, 9999px, 98px, 0); transform: skew(0.77deg); }
+}
+@keyframes glitch-anim2 {
+  0% { clip: rect(25px, 9999px, 63px, 0); transform: skew(0.7deg); }
+  100% { clip: rect(71px, 9999px, 96px, 0); transform: skew(0.18deg); }
+}
+
+/* --- 4. SCROLL INDICATOR --- */
+.scroll-indicator {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  opacity: 0.7;
+}
+
+.mouse-icon {
+  width: 20px;
+  height: 32px;
+  border: 2px solid var(--secondary);
+  border-radius: 10px;
+  position: relative;
+}
+
+.wheel {
+  width: 2px;
+  height: 6px;
+  background: var(--accent);
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scrollWheel 1.5s infinite;
+}
+
+.arrow-pixel {
+  font-family: var(--font-pixel);
+  font-size: 0.8rem;
+  color: var(--accent);
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes scrollWheel {
+  0% { top: 6px; opacity: 1; }
+  100% { top: 18px; opacity: 0; }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-5px); }
+  60% { transform: translateY(-3px); }
+}
+
+/* Ajustement mobile pour le HUD */
+@media (max-width: 768px) {
+  .hud-container { padding: 10px; }
+  .hud-corner { width: 20px; height: 20px; }
+}
+
+
+
+
+
+
+/* =========================================
+   AVATAR & NOUVEAUX EFFETS INTERACTIFS
+   ========================================= */
+
+/* Mise en page du Hero pour mettre l'avatar à côté du texte */
+.hero-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1; /* Prend l'espace disponible */
+}
+
+/* --- STYLE DE L'AVATAR --- */
+.hero-avatar {
+  flex: 0 0 200px; /* Taille fixe de 200px */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.avatar-frame {
+  width: 180px;
+  height: 180px;
+  background: #0f172a;
+  border: 4px solid var(--accent); /* Bordure dorée */
+  padding: 5px;
+  box-shadow: 10px 10px 0px rgba(0,0,0,0.5); /* Ombre dure style pixel */
+  transition: transform 0.3s ease;
+  overflow: hidden; /* Pour couper si l'image dépasse */
+}
+
+.avatar-frame:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 15px 15px 0px var(--secondary);
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: pixelated; /* Garde le style pixel net */
+}
+
+/* Indicateur "Online" sous l'avatar */
+.avatar-status {
+  margin-top: 15px;
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  color: #4ade80; /* Vert */
+  background: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #4ade80;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #4ade80;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7); }
+  70% { opacity: 1; box-shadow: 0 0 0 6px rgba(74, 222, 128, 0); }
+  100% { opacity: 1; box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+}
+
+/* --- TYPING EFFECT --- */
+.cursor-blink {
+  animation: blink 0.8s infinite;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* --- KONAMI CODE (GOD MODE) STYLE --- */
+.rainbow-mode {
+  animation: rainbow-bg 5s infinite;
+}
+
+.rainbow-mode .hero, 
+.rainbow-mode .project-card, 
+.rainbow-mode .avatar-frame {
+  border-color: #fff;
+  box-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+@keyframes rainbow-bg {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 768px) {
+  .hero-content-wrapper {
+    flex-direction: column-reverse; /* L'avatar passe au-dessus ou en-dessous */
+    text-align: center;
+  }
+
+  .hero-avatar {
+    margin-bottom: 20px;
+  }
+
+  .avatar-frame {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .rpg-stats {
+    justify-content: center;
+  }
+}
+
+
+
+
+
+/* =========================================
+   NOUVEAU STYLE : GALERIE & TERMINAL
+   ========================================= */
+
+/* --- TABS (FILTRES) --- */
+.gallery-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.tab-btn {
+  background: transparent;
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+  padding: 10px 20px;
+  font-family: var(--font-pixel);
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+}
+
+.tab-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.tab-btn.active {
+  background: var(--accent);
+  color: #000;
+  border-color: var(--accent);
+  box-shadow: 0 0 15px rgba(251, 191, 36, 0.4);
+}
+
+/* --- CONTAINER PRINCIPAL --- */
+.gallery-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  min-height: 500px; /* Évite les sauts de hauteur */
+}
+
+.nav-arrow {
+  background: rgba(15, 23, 42, 0.8);
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  font-family: var(--font-pixel);
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s;
+}
+
+.nav-arrow:hover {
+  background: var(--accent);
+  color: #000;
+}
+
+/* --- LA CARTE GALERIE --- */
+.gallery-card {
+  display: flex;
+  background: var(--card-bg);
+  border: 1px solid #334155;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fade-out { opacity: 0; transform: scale(0.98); }
+.fade-in { opacity: 1; transform: scale(1); }
+
+.gallery-visual {
+  flex: 1.2;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #334155;
+}
+
+.visual-frame {
+  width: 100%;
+  /* Le ratio est géré par tes classes video-ratio-box existantes */
+}
+
+.gallery-info {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.badge-type {
+  background: #334155;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.6rem;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.gallery-counter {
+  margin-top: auto;
+  padding-top: 20px;
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  color: var(--text-dim);
+  text-align: right;
+}
+
+/* --- NOUVEAU : LE CODE TERMINAL --- */
+.code-terminal {
+  background: #0d1117;
+  padding: 10px;
+  border-top: 1px solid #334155;
+  flex-grow: 1; /* Prend le reste de la hauteur */
+  font-family: 'Consolas', monospace;
+}
+
+.terminal-header {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.dot { width: 10px; height: 10px; border-radius: 50%; }
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.terminal-title {
+  font-family: var(--font-code);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  margin-left: 10px;
+}
+
+.terminal-body {
+  color: #c9d1d9;
+  font-size: 0.75rem;
+  overflow-x: auto;
+  white-space: pre-wrap; /* Permet le retour à la ligne */
+}
+
+code {
+  color: #7ee787; /* Couleur code Matrix/Hacker */
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .gallery-card { flex-direction: column; }
+  .gallery-visual { border-right: none; border-bottom: 1px solid #334155; }
+  .nav-arrow { position: absolute; top: 200px; } /* Flèches sur l'image en mobile */
+  .left { left: 10px; }
+  .right { right: 10px; }
+  .code-terminal { display: none; } /* On cache le code sur mobile pour gagner de la place */
+}
+
+.insert-coin-anim {
+  font-family: var(--font-pixel);
+  font-size: 1.2rem;
+  color: var(--accent);
+  animation: blink 1s infinite;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+
+
+
+  /* =========================================
+   NOUVEAU : TECH SHOWCASE (REMPLACE LE TERMINAL)
+   ========================================= */
+
+
+
+
+/* --- CE BLOC MANQUAIT DANS TON CODE --- */
+.tech-showcase {
+  background: #0d1117; /* Fond très sombre style GitHub/Terminal */
+  padding: 15px;
+  border-top: 1px solid #334155;
+  flex-grow: 1; /* Important : remplit le vide sous l'image */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 150px; /* Hauteur min pour faire joli sur PC */
+}
+
+
+.tech-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.tech-title {
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.tech-line {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+.tech-grid-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Responsive grid */
+  gap: 10px;
+  overflow-y: auto; /* Scroll si trop de technos */
+}
+
+.tech-item-card {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid #334155;
+  padding: 8px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: all 0.2s;
+}
+
+.tech-item-card:hover {
+  border-color: var(--secondary);
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+.tech-icon-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.tech-name {
+  font-family: var(--font-code);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+}
+
+
+
+
+/* =========================================
+   RESPONSIVE : MOBILE & TABLETTE
+   ========================================= */
+
+   @media (max-width: 768px) {
+
+    /* --- 1. HUD & DÉCORATION --- */
+    .hud-container { padding: 10px; }
+    .hud-corner { width: 25px; height: 25px; } /* Coins plus petits */
+    
+    /* On réduit la taille du glitch title */
+    h1.glitch { font-size: 1.1rem; }
+    .subtitle { font-size: 0.7rem; }
+    
+    /* On ajuste l'avatar et le texte pour qu'ils s'empilent */
+    .hero-content-wrapper {
+      flex-direction: column-reverse; /* Avatar au-dessus, texte en dessous */
+      text-align: center;
+      gap: 20px;
+    }
+    
+    .hero-text { width: 100%; }
+    
+    .hero-avatar {
+      flex: 0 0 auto;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    
+    .avatar-frame {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto; /* Centré */
+    }
+  
+    /* --- 2. ONGLETS DE FILTRE (TABS) --- */
+    .gallery-tabs {
+      flex-wrap: wrap; /* Permet aux boutons de passer à la ligne */
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+  
+    .tab-btn {
+      flex: 1 1 auto; /* Les boutons s'étirent pour remplir la largeur */
+      padding: 8px 10px;
+      font-size: 0.6rem;
+      text-align: center;
+    }
+  
+    /* --- 3. GALERIE & CARROUSEL --- */
+    .gallery-container {
+      /* Sur mobile, les flèches sont DANS la carte pour gagner de la place */
+      position: relative; 
+      min-height: auto;
+    }
+  
+    .gallery-card {
+      flex-direction: column; /* Image en haut, Info en bas */
+      border-radius: 4px;
+    }
+  
+
+    .gallery-visual {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid #334155;
+      
+      /* 🔴 LE FIX EST ICI : On retire le max-height sur le conteneur global */
+      max-height: none; 
+      height: auto;
+      display: flex;
+      flex-direction: column;
+    }
+  
+
+     /* On applique la limite de hauteur UNIQUEMENT à la vidéo/image */
+  .visual-frame {
+    width: 100%;
+    /* On garde une hauteur raisonnable pour la vidéo */
+    max-height: 250px; 
+    overflow: hidden;
+  }
+
+    /* Le Terminal de code prend trop de place sur mobile : on le cache */
+    .code-terminal {
+      display: none; 
+    }
+  
+    .gallery-info {
+      padding: 20px 15px; /* Moins de marge interne */
+    }
+  
+    .project-title { font-size: 1rem; }
+    .project-meta { font-size: 0.55rem; }
+  
+    /* --- 4. FLÈCHES DE NAVIGATION --- */
+    /* On positionne les flèches PAR DESSUS l'image sur mobile */
+    .nav-arrow {
+      position: absolute;
+      top: 100px; /* Environ au milieu de la zone image */
+      width: 35px;
+      height: 35px;
+      font-size: 1rem;
+      background: rgba(0, 0, 0, 0.7); /* Plus sombre pour contraste */
+      border-color: rgba(255, 255, 255, 0.3);
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .nav-arrow.left { left: 10px; }
+    .nav-arrow.right { right: 10px; }
+    
+    /* --- 5. FOOTER INSERT COIN --- */
+    .insert-coin-anim {
+      font-size: 0.9rem; /* Plus petit */
+    }
+    
+    .contact-icons {
+      flex-direction: center; /* Les liens l'un sous l'autre */
+      gap: 15px;
+    }
+    
+ /* On s'assure que le "System Loadout" a de la place */
+ .tech-showcase {
+  display: flex;
+  padding: 15px;
+  background: #0f172a; /* Fond sombre pour bien détacher */
+  border-top: 1px solid #334155;
+  /* On enlève toute contrainte de hauteur ici */
+  flex-grow: 0; 
+  height: auto;
+}
+
+  /* Ajustement de la grille pour qu'elle ne soit pas coupée */
+  .tech-grid-display {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    padding-bottom: 5px; /* Petite marge de sécurité */
+  }
+
+  .tech-item-card {
+    flex-direction: row; /* Icône à côté du texte sur mobile pour gagner de la place verticale */
+    padding: 5px 10px;
+    width: auto;
+  }
+
+  .tech-icon-img {
+    width: 18px;
+    height: 18px;
+  }
+
+
+
+  /* --- CORRECTION PROJET META (Le bug principal) --- */
+  .project-meta {
+    display: flex;
+    flex-direction: column; /* Empilement vertical */
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+
+  /* Style du badge Studio */
+  .badge-type {
+    display: inline-block;
+    max-width: 100%;
+    white-space: normal; /* Évite que le texte sorte du cadre */
+    margin-top: 2px;
+  }
+
+  /* --- AMÉLIORATION FLÈCHES --- */
+  .nav-arrow {
+    position: absolute;
+    top: 125px; /* Centré par rapport à la hauteur de l'image (250px) */
+    transform: translateY(-50%);
+    width: 40px; 
+    height: 40px;
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-arrow.left { left: 10px; }
+  .nav-arrow.right { right: 10px; }
+
+  /* --- VISUEL & INFO --- */
+  .gallery-visual {
+    max-height: 250px;
+    overflow: hidden; /* Coupe ce qui dépasse */
+  }
+
+  .gallery-info {
+    padding: 15px;
+  }
+  }
