@@ -68,7 +68,7 @@ const PROJECTS = [
       { label: "GITHUB", url: "https://github.com/JOKS-Studio/Pong-Lan" },
       { label: "APK", url: "https://github.com/JOKS-Studio/Pong-Lan" }
     ],
-    mediaSrc: "/assets/img/pong.jpg",
+    mediaSrc: "assets/images/pong.jpg",
     mediaType: "image",
     imageAlt: "Pong-Lan Screen"
   },
@@ -160,26 +160,6 @@ const BackgroundEffects = () => (
   </>
 );
 
-// const Hero = () => (
-//   <header id="hero" className="hero">
-//     <h1>[Jaurès AGOSSOU]</h1>
-//     <div className="subtitle">GAMEPLAY PROGRAMMER</div>
-//     <p>
-//       Expert en informatique hautement motivé, animé par une passion pour le développement de jeux vidéo.
-//       Aspire à approfondir ses compétences et à se spécialiser davantage dans ce domaine.
-//       Engagé dans une démarche d'apprentissage continu et d'excellence.
-//     </p>
-//     <a 
-//       href="assets/cv/CV.pdf" // 👈 Mise à jour du chemin
-//       className="btn-cv" 
-//       target="_blank" 
-//       rel="noopener noreferrer"
-//       download="[AGOSSOU_JAURES]_CV.pdf" // 👈 Ajout de l'attribut 'download'
-//     >
-//       TÉLÉCHARGER MON CV (PDF)
-//     </a>
-//   </header>
-// );
 
 const Skills = () => (
   <section>
@@ -210,90 +190,6 @@ const Skills = () => (
     </div>
   </section>
 );
-
-const ProjectCard = ({ project }) => {
-  // Fonction pour rendre le contenu multimédia (GIF ou YouTube)
-
-  const renderMedia = () => {
-    if (project.mediaType === "youtube" && project.mediaSrc) {
-      const embedUrl = `https://www.youtube.com/embed/${project.mediaSrc}?rel=0&autoplay=0`;
-      return (
-        // 🔑 Nouvelle div qui gère le ratio 16:9
-        <div className="video-ratio-box">
-          <iframe
-            src={embedUrl}
-            title={project.imageAlt}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="project-iframe"
-          ></iframe>
-        </div>
-      );
-    }
-    
-    if (project.mediaSrc) {
-      // Affichage d'un GIF ou d'une image simple
-      return (
-        <img 
-          src={project.mediaSrc} 
-          alt={project.imageAlt} 
-          className="project-media-img"
-        />
-      );
-    }
-
-    // 2. Gère l'image/GIF (quand mediaType est 'image', 'gif', ou manquant)
-    if (project.mediaSrc) {
-      return (
-        <img 
-          src={project.mediaSrc} // 👈 Utilise le chemin de l'image/GIF
-          alt={project.imageAlt} 
-          className="project-media-img" // 👈 Cette classe gère la taille
-        />
-      );
-    }
-
-    // Affichage du placeholder par défaut si aucune source média n'est fournie
-    return <span>{project.imageAlt}</span>;
-  };
-
-  return (
-    <div className="project-card">
-      <div className="project-visual">
-        {renderMedia()} 
-      </div>
-      <div className="project-content">
-        <div className="project-meta">
-          <span className="project-date">{project.date}</span>
-          <span>{project.context}</span>
-        </div>
-        <h3 className="project-title">{project.title}</h3>
-        <div className="tech-stack">{project.stack}</div>
-        <div className="description">
-          <ul>
-            {project.description.map((desc, i) => <li key={i}>{desc}</li>)}
-          </ul>
-        </div>
-        <div className="link-group">
-          {project.links.map((link, i) => (
-            <a 
-              key={i} 
-              href={link.url} 
-              className={`link-btn ${link.isItch ? 'link-itch' : ''}`}
-              target="_blank" // Ajouté pour ouvrir les liens dans un nouvel onglet
-              rel="noopener noreferrer"
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-
 
 const ProjectGallery = () => {
   const [filter, setFilter] = useState('all'); // 'all', 'pro', 'perso'
@@ -491,7 +387,7 @@ const ScrollIndicator = () => (
 
 const Hero = () => {
   // Utilisation de l'effet machine à écrire
-  const subtitle = useTypewriter("GAMEPLAY PROGRAMMER", 50);
+  const subtitle = useTypewriter("GAAMEPLAY PROGRAMMER", 50);
 
   return (
     <header id="hero" className="hero">
