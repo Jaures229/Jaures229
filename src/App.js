@@ -88,6 +88,8 @@ const PROJECTS = [
     links: [
       { label: "GITHUB", url: "https://github.com/Jaures229/R-Type" }
     ],
+    mediaSrc: "n7Ic8BMVGXg",
+    mediaType: "youtube",
     imageAlt: "[R-Type Screen]"
   }
 ];
