@@ -4,7 +4,7 @@
 
 # 💫 About Me:
 Hi 👋, <br>
-I'm AGOSSOU Jaurès A Final year computer science student with a strong drive to excel in game development and software engineering<br> <br> 🔭 I’m currently working on Rs-Island a 2D rogue-like game<br>👯 I’m looking to collaborate with 2D/3D games on unity and from scratch<br>🌱 I’m currently learning Backend development<br>⚡ Fun fact I am an anime/manga lover and a huge gamer<br>
+I'm  Jaurès AGOSSOU A Final year computer science student with a strong drive to excel in game development and software engineering<br> <br> 🔭 I’m currently working on Rs-Island a 2D rogue-like game<br>👯 I’m looking to collaborate with 2D/3D games on unity and from scratch<br>🌱 I’m currently learning Backend development<br>⚡ Fun fact I am an anime/manga lover and a huge gamer<br>
 
 
 ## 🌐 Socials:
