@@ -80,7 +80,7 @@ const PROJECTS = [
     context: "Projet Ecole",
     type: "perso",
     stack: "C++ • SFML • TCP/UDP",
-    technologies: ["CPP", "SFML", "Linux", "Netcode", "Git"],
+    technologies: ["CPP", "SFML", "Linux","Git"],
     description: [
       "Jeu de tir spatial multijoueur (Moteur Custom).",
       "Architecture ECS et Gestion Réseau UDP."
