@@ -436,7 +436,7 @@ const Hero = () => {
                 2. L'URL actuelle génère un avatar pixel unique basé sur ton prénom.
             */}
             <img 
-              src="Jaures229/assets/images/avatar1.jpg" 
+              src="assets/images/avatar1.jpg" 
               alt="Avatar Pixel" 
               className="avatar-img"
             />
