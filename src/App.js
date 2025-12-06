@@ -68,7 +68,7 @@ const PROJECTS = [
     links: [
       { label: "APK", url: "https://drive.google.com/file/d/1Oqr4qmm_4rKbLFKw7Im6U4BLNbcre4Ne/view?usp=drive_link" }
     ],
-    mediaSrc: "assets/images/pong-images.png",
+    mediaSrc: "assets/images/pong-image.png",
     mediaType: "image",
     imageAlt: "Pong-Lan Screen"
   },
