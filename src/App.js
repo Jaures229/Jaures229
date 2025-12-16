@@ -53,6 +53,42 @@ const PROJECTS = [
     mediaType: "youtube",
     imageAlt: "[Zemidjan Gameplay]"
   },
+  {
+    id: 3,
+    title: "Kekenon Racing",
+    date: "Juin 2025",
+    context: "Masseka Game Studio",
+    technologies: ["Unity", "CSharp", "Android", "Git"],
+    type: "pro", // ou 'perso'
+    stack: "Unity • C# • 2D • Mobile",
+    description: [
+      "Développer un prototype de jeu Mobile basé sur les zemidjans.",
+      "Conception d’un prototype de jeu 2D démontrant une connaissance des techniques de développement de jeux avec le C# Unity."
+    ],
+    links: [
+    ],
+    mediaSrc: "dho1rWR0GiA", // ID d'une vidéo YouTube (ex: "dQw4w9WgXcQ")
+    mediaType: "youtube", // Nouveau champ pour distinguer
+    imageAlt: "[GIF GAMEPLAY]"
+  },
+  {
+    id: 4,
+    title: "Kekenon Baba",
+    date: "Mai 2025",
+    context: "Masseka Game Studio",
+    technologies: ["Unity", "CSharp", "Android", "Git"],
+    type: "pro", // ou 'perso'
+    stack: "Unity • C# • 2D • Mobile",
+    description: [
+      "Développer un prototype de jeu Mobile basé sur les zemidjans.",
+      "Conception d’un prototype de jeu 2D démontrant une connaissance des techniques de développement de jeux avec le C# Unity."
+    ],
+    links: [
+    ],
+    mediaSrc: "jGwtcBUdAIc", // ID d'une vidéo YouTube (ex: "dQw4w9WgXcQ")
+    mediaType: "youtube", // Nouveau champ pour distinguer
+    imageAlt: "[GIF GAMEPLAY]"
+  },
   // ... Pour tes autres projets, ajoute la ligne 'technologies' ...
   {
     id: 5,
