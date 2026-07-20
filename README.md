@@ -14,13 +14,13 @@
 
 # 💫 About Me:
 Hi 👋, <br>
-I'm **Jaurès AGOSSOU**, a final year computer science student with a strong drive to excel in game development and software engineering.[cite: 3]<br><br>
-🔭 I'm currently working on **Rs-Island**, a 2D rogue-like game[cite: 3]<br>
-👯 I'm looking to collaborate on 2D/3D games in Unity and from scratch[cite: 3]<br>
-🌱 I'm currently learning Backend development[cite: 3]<br>
-⚡ Fun fact: I'm an anime/manga lover and a huge gamer — expect a few JoJo references around here 👀[cite: 3]<br>
+I'm **Jaurès AGOSSOU**, a final year computer science student with a strong drive to excel in game development and software engineering.<br><br>
+🔭 I'm currently working on **Rs-Island**, a 2D rogue-like game<br>
+👯 I'm looking to collaborate on 2D/3D games in Unity and from scratch<br>
+🌱 I'm currently learning Backend development<br>
+⚡ Fun fact: I'm an anime/manga lover and a huge gamer — expect a few JoJo references around here 👀<br>
 
-> *"The wind... it's blowing."* — Diavolo, Vento Aureo[cite: 3]
+> *"The wind... it's blowing."* — Diavolo, Vento Aureo
 
 ## 🎯 Specializations & Core Interests:
 *   **Low-Level Systems:** Engine architecture from scratch, memory management, and data-oriented design (ECS).
@@ -28,15 +28,15 @@ I'm **Jaurès AGOSSOU**, a final year computer science student with a strong dri
 *   **Gameplay Engineering:** Crafting tight mechanics, customized physics, state machines, and optimization for mobile/desktop.
 
 ## 🌐 Socials:
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/jaurès-agossou-4021a1264) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:jauresagossou-dev@proton.me) [![Portfolio](https://img.shields.io/badge/Portfolio-000000?logo=firefox&logoColor=FF7139)](https://jaures229.github.io)[cite: 3]
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/jaurès-agossou-4021a1264) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:jauresagossou-dev@proton.me) [![Portfolio](https://img.shields.io/badge/Portfolio-000000?logo=firefox&logoColor=FF7139)](https://jaures229.github.io)
 
 # 💻 Technical Arsenal:
 
 ### ⚙️ Systems & Core Programming
-![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white) ![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)[cite: 3]
+![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white) ![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 ### 🎮 Game Engines & Graphics Libraries
-![Unity](https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white) ![SFML/CSFML](https://img.shields.io/static/v1?style=for-the-badge&message=SFML/CSFML&color=567e25&logo=Löve2D&logoColor=567e25&label=)[cite: 3]
+![Unity](https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white) ![SFML/CSFML](https://img.shields.io/static/v1?style=for-the-badge&message=SFML/CSFML&color=567e25&logo=Löve2D&logoColor=567e25&label=)
 
 
 ## 🕹️ Jams & Guild Achievements:
@@ -53,13 +53,13 @@ I'm **Jaurès AGOSSOU**, a final year computer science student with a strong dri
 
 <br/>
 
-![](https://github-readme-streak-stats.herokuapp.com/?user=Jaures229&theme=react&hide_border=false)[cite: 3]
+![](https://github-readme-streak-stats.herokuapp.com/?user=Jaures229&theme=react&hide_border=false) 
 
 ## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=Jaures229&theme=onedark&no-frame=false&no-bg=false&margin-w=4)[cite: 3]
+![](https://github-profile-trophy.vercel.app/?username=Jaures229&theme=onedark&no-frame=false&no-bg=false&margin-w=4)
 
 ### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)[cite: 3]
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
 
 ---
 
@@ -69,6 +69,6 @@ I'm **Jaurès AGOSSOU**, a final year computer science student with a strong dri
 
 <div align="center">
 
-[![](https://visitcount.itsvg.in/api?id=Jaures229&icon=9&color=1)](https://visitcount.itsvg.in)[cite: 3]
+[![](https://visitcount.itsvg.in/api?id=Jaures229&icon=9&color=1)](https://visitcount.itsvg.in)
 
 </div>
